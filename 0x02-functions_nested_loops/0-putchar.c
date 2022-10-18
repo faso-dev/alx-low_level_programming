@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * _putchar: Entry point
+ * main - Entry point
  * prints giver character
- * Returns: Allways 0
+ * Return: Allways 0 (Success)
  */
 int main(void)
 {
@@ -16,5 +16,5 @@ int main(void)
 	_putchar('a');
 	_putchar('r');
 	_putchar('\n');
-	return(0);
+	return (0);
 }
