@@ -1,4 +1,4 @@
-#include <unistd.h>
+#include <main.h>
 
 /**
  * _putchar: Entry point
@@ -16,4 +16,5 @@ int main(void)
 	_putchar('a');
 	_putchar('r');
 	_putchar('\n');
+	return(0);
 }
