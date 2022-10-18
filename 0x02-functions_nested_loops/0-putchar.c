@@ -1,13 +1,11 @@
-#include <stdio.h>
+#include <unistd.h>
 
 /**
- * main: Entry point
- * prints "_putchar" 
+ * _putchar: Entry point
+ * prints giver character
  * Returns: Allways 0
  */
-
-int main(void)
+int _putchar(char c)
 {
-	printf("_putchar\n");
-	return(0);
+	return (write(1, &c, 1));
 }
