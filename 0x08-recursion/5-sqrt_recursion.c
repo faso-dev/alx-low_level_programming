@@ -25,4 +25,3 @@ int _sqrt_recursion(int n)
 {
 	return (square_root(1, n));
 }
-

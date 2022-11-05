@@ -16,6 +16,18 @@ int palindrome(char *s, int len)
 }
 
 /**
+ * _strlen_recursion - returns the length of a string
+ * @s: string
+ * Return: length of string
+ */
+int _strlen_recursion(char *s)
+{
+	if (*s == '\0')
+		return (0);
+	return (1 + _strlen_recursion(s + 1));
+}
+
+/**
  * is_palindrome - checks if a string is a palindrome
  * @s: string
  * Return: 1 if s is a palindrome, 0 otherwise
