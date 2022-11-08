@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
-* _strtow - splits a string into words
+* strtow - splits a string into words
 * @str: string to split
 * Return: pointer to an array of strings
 */
-char **_strtow(char *str)
+char **strtow(char *str)
 {
 	char **p;
 	int i, j, k, l, m, n;
