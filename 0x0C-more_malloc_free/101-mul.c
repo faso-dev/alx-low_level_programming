@@ -2,15 +2,15 @@
 #include "stdio.h"
 
 /**
- * main - multiplies two numbers
+ * mul - multiplies two numbers
  * @argc: argument count
  * @argv: argument vector for values
  *
  * Return: Always 0 (Success)
  */
-int main(int argc, char *argv[])
+int mul(int argc, char *argv[])
 {
-	int i, j, mul;
+	int i, j, product;
 
 	if (argc == 3)
 	{
@@ -30,8 +30,8 @@ int main(int argc, char *argv[])
 				exit(98);
 			}
 		}
-		mul = atoi(argv[1]) * atoi(argv[2]);
-		printf("%d\n", mul);
+		product = atoi(argv[1]) * atoi(argv[2]);
+		printf("%d\n", product);
 	}
 	else
 	{
