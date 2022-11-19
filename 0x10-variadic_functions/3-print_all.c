@@ -53,7 +53,7 @@ void print_all(const char * const format, ...)
 	int i = 0, j = 0;
 	char *separator = "";
 
-	symbol_t symbol_map[] = {
+	simbol_t symbol_map[] = {
 		{'c', print_char},
 		{'s', print_string},
 		{'f', print_float},
