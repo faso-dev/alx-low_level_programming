@@ -2,11 +2,11 @@
 #include "stdio.h"
 
 /**
- * main - prints the opcodes of its own main function.
- * @argc - argument counter
- * @argv - argument vector
- * Return: Always 0 (Sucess)
- */
+* main - prints the opcodes of its own main function.
+* @argc - argument counter
+* @argv - argument vector
+* Return: Always 0 (Sucess)
+*/
 int main(int argc, char *argv[])
 {
 	if (argc != 2)

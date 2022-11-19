@@ -1,48 +1,9 @@
 #include "variadic_functions.h"
 
 /**
-* print_all - prints anything
-* @format: list of types of arguments passed to the function
-*
+* print_char - prints a char
+* @arguments: input arguments
 */
-void print_all(const char * const format, ...)
-{
-	va_list arguments;
-	int i = 0, j = 0;
-	char *separator = "";
-
-	symbol_t symbol[] = {
-		{"c", print_char},
-		{"i", print_int},
-		{"f", print_float},
-		{"s", print_string},
-		{NULL, NULL}
-	};
-
-	va_start(arguments, format);
-	while (format && format[i])
-	{
-		j = 0;
-		while (symbol[j].all)
-		{
-			if (format[i] == symbol[j].all[0])
-			{
-				printf("%s", separator);
-				symbol[j].func(arguments);
-				separator = ", ";
-			}
-			j++;
-		}
-		i++;
-	}
-	printf("\n");
-	va_end(arguments);
-}
-
-/**
- * print_char - prints a char
- * @arguments: input arguments
- */
 void print_char(va_list arguments)
 {
 	printf("%c", va_arg(arguments, int));
@@ -80,4 +41,41 @@ void print_string(va_list arguments)
 		return;
 	}
 	printf("%s", args);
+}
+
+/**
+* print_all - prints anything
+* @format: list of types of arguments passed to the function
+*/
+void print_all(const char * const format, ...)
+{
+	va_list arguments;
+	int i = 0, j = 0;
+	char *separator = "";
+
+	symbol_t symbol_map[] = {
+		{'c', print_char},
+		{'s', print_string},
+		{'f', print_float},
+		{'i', print_int}
+	};
+
+	va_start(arguments, format);
+	while (format && format[i])
+	{
+		j = 0;
+		while (symbol_map[j].all)
+		{
+			if (format[i] == symbol_map[j].all[0])
+			{
+				printf("%s", separator);
+				symbol_map[j].func(arguments);
+				separator = ", ";
+			}
+			j++;
+		}
+		i++;
+	}
+	printf("\n");
+	va_end(arguments);
 }

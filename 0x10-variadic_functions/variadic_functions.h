@@ -5,7 +5,7 @@
 #include <stdarg.h>
 
 /**
-* print_all - prints anything
+* struct print_all - prints anything
 * @all: arguments
 * @func: pointer to the functions that prints all
 */
@@ -19,5 +19,4 @@ int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
-
 #endif
