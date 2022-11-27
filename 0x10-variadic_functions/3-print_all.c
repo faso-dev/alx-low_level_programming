@@ -53,23 +53,23 @@ void print_all(const char * const format, ...)
 	int i = 0, j = 0;
 	char *separator = "";
 
-	simbol_t symbol_map[] = {
-		{'c', print_char},
-		{'s', print_string},
-		{'f', print_float},
-		{'i', print_int}
+	print_t print[] = {
+		{"c", print_char},
+		{"i", print_int},
+		{"f", print_float},
+		{"s", print_string}
 	};
 
 	va_start(arguments, format);
 	while (format && format[i])
 	{
 		j = 0;
-		while (symbol_map[j].all)
+		while (print[j].type)
 		{
-			if (format[i] == symbol_map[j].all[0])
+			if (format[i] == print[j].type[0])
 			{
 				printf("%s", separator);
-				symbol_map[j].func(arguments);
+				print[j].f(arguments);
 				separator = ", ";
 			}
 			j++;

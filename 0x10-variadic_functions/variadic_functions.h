@@ -5,15 +5,15 @@
 #include <stdarg.h>
 
 /**
-* struct print_all - prints anything
-* @all: arguments
-* @func: pointer to the functions that prints all
-*/
-typedef struct print_all
+ * struct print - struct for print
+ * @c: char
+ * @f: function
+ */
+typedef struct print
 {
-	char all;
-	void (*func)(va_list arguments);
-} simbol_t;
+	char *c;
+	void (*f)(va_list);
+} print_t;
 
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
