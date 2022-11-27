@@ -6,12 +6,12 @@
 
 /**
  * struct print - struct for print
- * @c: char
+ * @type: char
  * @f: function
  */
 typedef struct print
 {
-	char *c;
+	char *type;
 	void (*f)(va_list);
 } print_t;
 
