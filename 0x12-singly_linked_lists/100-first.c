@@ -1,13 +1,12 @@
 #include "stdio.h"
 
 /**
-* first_func - prints before the main function is executed.
-*
+* firstfunc - prints before the main function is executed.
 * Return: Always 0.
 */
-void first_func(void) __attribute__ ((constructor))
+void firstfunc(void) __attribute__ ((constructor))
 
-void first_func(void)
+void firstfunc(void)
 {
 	char *m;
 
